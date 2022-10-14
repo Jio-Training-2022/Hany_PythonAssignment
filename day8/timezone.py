@@ -10,6 +10,7 @@ from datetime import datetime
 def time_delta(t1, t2):
     #Sun 10 May 2015 13:54:36 -0700
     fmt = "%a %d %b %Y %H:%M:%S %z"
+    #making the input string of type datetime
     ti1 = datetime.strptime(t1,fmt)
     ti2 = datetime.strptime(t2,fmt)
     return str(int(abs((ti1 - ti2).total_seconds())))
